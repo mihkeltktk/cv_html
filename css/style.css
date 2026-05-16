@@ -6,7 +6,7 @@ body {
   margin: 0;
   background: #ffffff;
   color: #000000;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -17,17 +17,17 @@ body {
 }
 
 .hero h1 {
-  margin: 0 0 12px;
+  margin: 25px 0 10px;
   font-size: 48px;
-  font-weight: 900;
-  line-height: 1;
+  font-weight: bold;
+  line-height: normal;
 }
 
 .hero h2 {
-  margin: 0 0 40px;
+  margin: 0;
   font-size: 32px;
-  font-weight: 700;
-  line-height: 1.1;
+  font-weight: bold;
+  line-height: normal;
 }
 
 .profile-photo {
@@ -45,21 +45,22 @@ body {
 h3 {
   margin: 0 0 20px;
   font-size: 20px;
-  font-weight: 700;
-  line-height: 1.15;
+  font-weight: bold;
+  line-height: normal;
 }
 
 .box {
   width: 100%;
-  padding: 5px;
+  padding: 9px;
   border: 1px solid #000000;
-  border-radius: 8px;
+  border-radius: 10px;
   background: #f7f7f7;
+  text-align: justify;
 }
 
 p {
-  margin: 0 0 18px;
-  line-height: 1.15;
+  margin: 0 0 1em;
+  line-height: normal;
 }
 
 p:last-child {
@@ -67,13 +68,12 @@ p:last-child {
 }
 
 ul {
-  margin: 0 0 20px 22px;
+  margin: 0 0 1em 1.7em;
   padding: 0;
 }
 
-li {
-  line-height: 1.15;
-  margin-bottom: 2px;
+ul:last-child {
+  margin-bottom: 0;
 }
 
 .two-columns {
@@ -93,40 +93,23 @@ li {
 }
 
 .skills-box ul {
-  margin-bottom: 0;
+  margin: 0 0 0 1.7em;
 }
 
 .tech-icons {
   display: flex;
   justify-content: center;
-  gap: 90px;
-  margin: 18px 0 26px;
+  gap: 100px;
+  margin: 25px 0 30px;
 }
 
-.tech-icons span {
-  min-width: 78px;
-  text-align: center;
-  font-size: 34px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
+.tech-icon {
+  height: 25px;
+ }
 
 .footer {
-  margin-top: 35px;
+  margin: 40px 0 25px;
   text-align: center;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  margin-bottom: 26px;
-}
-
-.social-icons img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
 }
 
 .footer p {
@@ -134,77 +117,40 @@ li {
   margin: 0;
 }
 
-@media (max-width: 940px) {
-  .page {
-    width: 100%;
-    max-width: 900px;
-    padding: 0 14px 28px;
-  }
-
-  .two-columns {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 30px;
-  }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin: 0 0 40px;
 }
 
-@media (max-width: 720px) {
-  body {
-    font-size: 14px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .hero h2 {
-    font-size: 26px;
-    margin-bottom: 30px;
-  }
-
-  h3 {
-    font-size: 18px;
-    margin-bottom: 14px;
-  }
-
-  .section {
-    margin-top: 30px;
-  }
-
-  .two-columns {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .profile-photo {
-    width: 160px;
-    height: 160px;
-  }
-
-  .tech-icons {
-    gap: 30px;
-  }
-
-  .tech-icons span {
-    min-width: auto;
-    font-size: 24px;
-  }
-
-  .social-icons {
-    gap: 45px;
-  }
+.social-icon {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  transition: background-image 0.3s ease-in-out;
 }
 
-@media (max-width: 420px) {
-  .page {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+.instagram-icon {
+  background-image: url("../images/instagram.svg");
+}
 
-  .tech-icons {
-    gap: 18px;
-  }
+.instagram-icon:hover, .instagram-icon:focus {
+  background-image: url("../images/instagram_red.svg");
+}
 
-  .social-icons {
-    gap: 30px;
-  }
+.facebook-icon {
+  background-image: url("../images/facebook.svg");
+}
+
+.facebook-icon:hover, .facebook-icon:focus {
+  background-image: url("../images/facebook_red.svg");
+}
+
+.youtube-icon {
+  background-image: url("../images/youtube.svg");
+}
+
+.youtube-icon:hover, .youtube-icon:focus {
+  background-image: url("../images/youtube_red.svg");
 }
